@@ -64,7 +64,54 @@
         .main-content p {
             font-size: 1.2em;
         }
+        #staff-gallery {
+            text-align: center;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        #staff-gallery h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        #staff-gallery p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .card {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            cursor: pointer;
+        }
+        .card img {
+            border-radius: 10px;
+        }
+        .card h3 {
+            margin: 10px 0;
+            font-size: 1.5em;
+        }
+        .description {
+            display: none;
+            font-size: 1em;
+        }
     </style>
+    <script>
+        function show_description(event) {
+            const description = event.currentTarget.querySelector('.description');
+            if (description.style.display === 'none' || !description.style.display) {
+                description.style.display = 'block';
+            } else {
+                description.style.display = 'none';
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -89,5 +136,84 @@
         <h2>WELCOME TO SITE SILVER</h2>
         <p>We are your only way to true knowledge.</p>
     </div>
+    <section id="staff-gallery" class="section">
+        <h2>Wall of Fame</h2>
+        <p>The Wall Of Fame is where we thank all the people who helped in the developement of the Site.</p>
+        <div style="height: 40px;"></div>
+        <div class="card-container">
+            <div class="card" onclick="show_description(event)">
+                <div class="card-rgb">
+                    <img src="image" alt="Staff member 1" width="100%" />
+                    <h3>Amaan</h3>
+                    <div id="description1" class="description">
+                        <p>Not yet added!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="show_description(event)">
+                <div class="card-rgb">
+                    <img src="image" alt="Staff member 2" width="100%" />
+                    <h3>Vabzie</h3>
+                    <div id="description2" class="description">
+                        <p>Not yet added!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="show_description(event)">
+                <div class="card-rgb">
+                    <img src="image" alt="Staff member 3" width="100%" />
+                    <h3>Deathtom</h3>
+                    <div id="description3" class="description">
+                        <p>Not yet added!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="show_description(event)">
+                <div class="card-rgb">
+                    <img src="image" alt="Staff member 4" width="100%" />
+                    <h3>Phamtom</h3>
+                    <div id="description4" class="description">
+                        <p>Not yet added!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="show_description(event)">
+                <div class="card-rgb">
+                    <img src="image" alt="Staff member 5" width="100%" />
+                    <h3>Gozzy</h3>
+                    <div id="description5" class="description">
+                        <p>Not yet added!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="show_description(event)">
+                <div class="card-rgb">
+                    <img src="image" alt="Staff member 6" width="100%" />
+                    <h3>Medkit</h3>
+                    <div id="description6" class="description">
+                        <p>Not yet added!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="show_description(event)">
+                <div class="card-rgb">
+                    <img src="image" alt="Staff member 7" width="100%" />
+                    <h3>James_ang</h3>
+                    <div id="description7" class="description">
+                        <p>Not yet added!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="show_description(event)">
+                <div class="card-rgb">
+                    <img src="image" alt="Staff member 8" width="100%" />
+                    <h3>Turtle</h3>
+                    <div id="description8" class="description">
+                        <p>Not yet added!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
